@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekam Medis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="logosmkn1jkt.webp" alt="Logo UKS">
+                <h2>Naona - Medically</h2><br><br>
+                <p>Ini merupakan fitur untuk Perekaman Medis.</p>
+            </div>
+            <nav class="menu">
+                <a href="nacidnay.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="periksapasien.html"><i class="fas fa-user-md"></i> Periksa Pasien</a>
+                <a href="manajemenobat.html"><i class="fas fa-pills"></i> Manajemen Obat</a>
+                <a href="rekammedis.html" class="active"><i class="fas fa-book-medical"></i> Rekam Medis</a>
+                <a href="pengaturan.html"><i class="fas fa-cog"></i> Pengaturan</a>
+            </nav>
+            <div class="date-time" id="dateTime"></div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header>
+                <h1>Rekam Medis</h1>
+                <button class="form-button">Form Rekam Medis</button>
+            </header>
+            <div id="form-rekam-medis">
+                <input type="text" id="nama_pasien" placeholder="Nama Pasien">
+                <select id="status_pasien">
+                    <option value="">Pilih Status</option>
+                    <option value="siswa">Siswa</option>
+                    <option value="guru">Guru</option>
+                    <option value="staff">Staff</option>
+                </select>
+                <input type="text" id="kelas_pasien" placeholder="Kelas">
+                <input type="date" id="tgl_kunjungan" placeholder="Tanggal Kunjungan">
+                <input type="text" id="riwayat_penyakit" placeholder="Riwayat Penyakit">
+                <input type="text" id="obat_dikonsumsi" placeholder="Obat yang Dikonsumsi">
+                <button onclick="tambahRekamMedis()">Tambah</button>
+            </div>
+            
+
+            <!-- Tabel Daftar Rekam Medis -->
+            <section class="table-section">
+                <h2>Daftar Rekam Medis</h2>
+                <table id="rekamMedisTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Pasien</th>
+                            <th>Status Pasien</th>
+                            <th>Kelas</th>
+                            <th>Tanggal Kunjungan</th>
+                            <th>Riwayat Penyakit</th>
+                            <th>Obat yang Dikonsumsi</th>
+                            <th>Aksi</th>
+                        </tr>
+                        <tbody id="rekamMedisTableBody"></tbody>
+                    </thead>
+                </table>
+            </section>
+
+            <footer class="footer">
+                <p>&copy; 2024 Naona - SMK Negeri 1 Jakarta</p>
+            </footer>
+        </main>
+    </div>
+    <script src="rekammedis.js"></script>
+</body>
+</html>

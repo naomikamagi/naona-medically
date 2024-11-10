@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pemeriksaan Pasien</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container"></div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="logosmkn1jkt.webp" alt="Logo UKS"><br>
+            <h2>Naona - Medically</h2><br><br>
+            <p>Ini merupakan fitur untuk Pemeriksaan Pasien.</p>
+        </div>
+        <nav class="menu">
+            <a href="nacidnay.html"><i class="fas fa-home"></i>Dashboard</a>
+            <a href="periksapasien.html" class="active"><i class="fas fa-user-md"></i>Periksa Pasien</a>
+            <a href="manajemenobat.html"><i class="fas fa-pills"></i>Manajemen Obat</a>
+            <a href="rekammedis.html"><i class="fas fa-book-medical"></i>Rekam Medis</a>
+            <a href="pengaturan.html"><i class="fas fa-cog"></i> Pengaturan</a>
+        </nav>
+        <div class="date-time" id="dateTime"></div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <header>
+            <h1>Pemeriksaan Pasien</h1>
+            <button class="form-button">Form Periksa</button>
+        </header>
+        <div id="form-pasien">
+            <input type="text" id="nama" name="nama_pasien" placeholder="Nama Pasien">
+            <select id="status" name="status_pasien">
+                <option value="">Pilih Status</option>
+                <option value="siswa">Siswa</option>
+                <option value="guru">Guru</option>
+                <option value="staff">Staff</option>
+            </select>
+            <input type="text" id="kelas" name="kelas" placeholder="Kelas">
+            <input type="time" id="jam" name="jam">
+            <input type="text" id="keluhan" name="keluhan" placeholder="Keluhan">
+            <select id="keterangan" name="keterangan">
+                <option value="">Pilih Keterangan</option>
+                <option value="belum ditangani">Belum Ditangani</option>
+                <option value="sudah ditangani">Sudah Ditangani</option>
+            </select>
+            <button onclick="tambahData()">Tambah</button>
+        </div>
+        
+        
+        <!-- Tabel Daftar Pemeriksaan Pasien -->
+        <section class="table-section">
+            <h2>Daftar Pemeriksaan Pasien</h2>
+            <table id="pasienTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Pasien</th>
+                        <th>Status Pasien</th>
+                        <th>Kelas</th>
+                        <th>Jam</th>
+                        <th>Keluhan</th>
+                        <th>Keterangan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data akan ditambahkan di sini -->
+                </tbody>
+            </table>
+        </section>
+            <div class="footer">
+                <p>&copy; 2024 Naona - SMK Negeri 1 Jakarta</p>
+            </footer>
+        </section>
+    </main>
+    <script src="periksapasien.js"></script>
+</body>
+</html>

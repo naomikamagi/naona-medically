@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard UKS</title>
+    <link rel="stylesheet" href="nacidnay.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="logosmkn1jkt.webp" alt="Logo UKS">
+                <h2>Naona - Medically</h2><br><br>
+                <p>Selamat Datang di Website Ini. Pilih Fitur yang Ingin Anda Gunakan.</p>
+            </div>
+            <nav class="menu">
+                <a href="nacidnay.html" class="active"><i class="fas fa-home"></i>Dashboard</a>
+                <a href="periksapasien.html"><i class="fas fa-user-md"></i>Periksa Pasien</a>
+                <a href="manajemenobat.html"><i class="fas fa-pills"></i>Manajemen Obat</a>
+                <a href="rekammedis.html"><i class="fas fa-book-medical"></i>Rekam Medis</a>
+                <a href="pengaturan.html"><i class="fas fa-cog"></i> Pengaturan</a>
+            </nav>
+            <div class="date-time" id="dateTime"></div>
+        </aside>
+
+        <!-- Konten Utama -->
+        <main class="main-content">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="stat">
+                    <div class="stat-item">Jumlah Petugas<br><span>____</span></div>
+                    <div class="stat-item">Jenis Obat<br><span>_____</span></div>
+                    <div class="stat-item">Jumlah Obat<br><span>22 Obat</span></div>
+                    <div class="stat-item">Pasien Siswa<br><span>3 Orang</span></div>
+                    <div class="stat-item">Pasien Guru<br><span>_____</span></div>
+                </div>
+            </header>
+            <section class="charts">
+                <h3>Grafik Kesehatan</h3>
+                <canvas id="chartPasien"></canvas>
+            </section>            
+            <section class="footer">
+                <p>&copy; 2024 Naona - SMK Negeri 1 Jakarta</p>
+            </footer>
+    <script src="script.js"></script>
+</body>
+</html>

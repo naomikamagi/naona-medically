@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekam Medis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="logosmkn1jkt.webp" alt="Logo UKS">
+                <h2>Naona - Medically</h2><br><br>
+                <p>Ini merupakan fitur untuk Pengaturan.</p>
+            </div>
+            <nav class="menu">
+                <a href="nacidnay.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="periksapasien.html"><i class="fas fa-user-md"></i> Periksa Pasien</a>
+                <a href="manajemenobat.html"><i class="fas fa-pills"></i> Manajemen Obat</a>
+                <a href="rekammedis.html" class="active"><i class="fas fa-book-medical"></i> Rekam Medis</a>
+                <a href="pengaturan.html"><i class="fas fa-cog"></i> Pengaturan</a>
+            </nav>
+            <div class="date-time" id="dateTime"></div>
+        </aside>
+    </div>
+    <div>
+        <!-- pengaturan.html -->
+<div id="emergencyContacts">
+    <h2>Pengaturan Kontak Darurat</h2>
+    <form id="emergencyForm">
+      <label for="contactName">Nama Kontak</label>
+      <input type="text" id="contactName" name="contactName" required>
+  
+      <label for="contactNumber">Nomor Kontak</label>
+      <input type="text" id="contactNumber" name="contactNumber" required>
+  
+      <label for="contactType">Tipe Kontak</label>
+      <select id="contactType" name="contactType">
+        <option value="family">Keluarga</option>
+        <option value="hospital">Rumah Sakit</option>
+      </select>
+  
+      <button type="submit">Simpan Kontak Darurat</button>
+    </form>
+    
+    <h3>Kontak Darurat Tersimpan</h3>
+    <ul id="contactsList"></ul>
+  </div>
+  
+      
+            <footer class="footer">
+                <p>&copy; 2024 Naona - SMK Negeri 1 Jakarta</p>
+            </footer>
+        </main>
+    </div>
+    <script src="pengaturan.js"></script>
+</body>
+</html>
